@@ -9,6 +9,7 @@ import com.moxi.mougblog.base.global.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
@@ -29,8 +30,8 @@ public class BlogListener {
     @Autowired
     private RedisUtil redisUtil;
 
-    @Autowired
-    private SearchFeignClient searchFeignClient;
+//    @Autowired
+//    private SearchFeignClient searchFeignClient;
 
     // TODO 在这里同时需要对Redis和Solr进行操作，同时利用MQ来保证数据一致性
     @RabbitListener(queues = "mogu.blog")

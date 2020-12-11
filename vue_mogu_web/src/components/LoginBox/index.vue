@@ -5,11 +5,8 @@
         <span class="t1">
           登录
         </span>
-        <div class="t2" @click="closeLogin()">
-          X
-        </div>
       </div>
-      <el-divider></el-divider>
+<!--      <el-divider></el-divider>-->
       <el-form :label-position="labelPosition" :rules="loginRules" :model="loginForm" ref="loginForm">
         <el-form-item label="用户名" prop="userName">
           <el-input v-model="loginForm.userName" placeholder="请输入用户名或邮箱" :disabled="loginType.password"></el-input>
@@ -63,12 +60,9 @@
         <span class="t1">
           注册
         </span>
-        <div class="t2" @click="closeLogin()">
-          X
-        </div>
       </div>
-      <el-divider></el-divider>
-      <el-form :rules="rules" :label-position="labelPosition" :model="registerForm" ref="registerForm">
+
+      <el-form :rules="rules" :label-position="labelPosition" :model="registerForm" ref="registerForm" >
         <el-form-item label="用户名" prop="userName">
           <el-input v-model="registerForm.userName" placeholder="用户名长度在5~20之间" :disabled="loginType.password"></el-input>
         </el-form-item>
@@ -98,7 +92,7 @@
       </el-form>
     </div>
 
-    <div class="mask"></div>
+    <div class="mask" @click="closeLogin()" ></div>
 
   </div>
 </template>
@@ -314,7 +308,7 @@
   .box {
     width: 400px;
     height: 420px;
-    background: white;
+    background: rgba(0,0,0,.75);
     position: fixed;
     margin: auto;
     left: 0;
@@ -322,6 +316,13 @@
     top: 0;
     bottom: 0;
     z-index: 101; /* 要比遮罩层大 */
+    /*transform: translate(-50%,-50%);*/
+    box-shadow:0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;/*登录窗口边角圆滑*/
+  }
+
+  .el-form-item__error{
+    margin-left: 10px;
   }
 
   .registerBox {
@@ -329,12 +330,14 @@
   }
 
   .box .title {
-    height: 48px;
+    height: 68px;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-    line-height: 48px;
+    line-height: 68px;
+    color: #EEEEEE;
   }
+
   .box .title .t2 {
     font-size: 16px;
     float: right;
@@ -348,13 +351,22 @@
   }
 
   .box .el-form-item__label {
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 16px;
+  }
+
+  .box .el-form-item__content{
+    margin: 0px 20px;
   }
 
   .box .el-input__inner {
     margin-left: 10px;
-    width: 90%;
+    width: 94%;
+    background: lightgrey;
+  }
+
+  .box .el-input__inner::placeholder {
+    color: #111111;
   }
 
   .box .btn {
@@ -392,6 +404,11 @@
     height: 100px;
     text-align: center;
     z-index: 101; /* 要比遮罩层大 */
+  }
+
+  .loginForm{
+    margin: 0px 15px;
+
   }
 
   /* 遮罩层 */
