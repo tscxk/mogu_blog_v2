@@ -20,6 +20,67 @@
     </div>
     <div class="blank"></div>
 
+    <!--2020栏目-->
+<!--    <div class="img_channel_all">-->
+<!--      <div class="img_channel">-->
+<!--        <div class="channel_title">-->
+<!--          审查调查-->
+<!--        </div>-->
+<!--        <el-divider></el-divider>-->
+<!--        <div class="channel_first">-->
+<!--          <div class="channel_first_img">-->
+<!--            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607749725779&di=75fe215e959b8227cee24b22b699cb70&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F27%2F18299%2Ff31c1951c3218dfe_1366x768.jpg">-->
+
+<!--          </div>-->
+<!--          <div class="channel_first_content">-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查和监察调查-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--        <div class="channel_list">-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="img_channel">-->
+<!--        <div class="channel_title">-->
+<!--          审查调查-->
+<!--        </div>-->
+<!--        <el-divider></el-divider>-->
+<!--        <div class="channel_first">-->
+<!--          <div class="channel_first_img">-->
+<!--            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607749725779&di=75fe215e959b8227cee24b22b699cb70&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F27%2F18299%2Ff31c1951c3218dfe_1366x768.jpg">-->
+
+
+<!--          </div>-->
+<!--          <div class="channel_first_content">-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查和监察调查-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--        <div class="channel_list">-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            西藏自治区交通运输厅办公室主任庹江春接受纪律审查任庹江春接受纪律审查任庹江春接受纪律审查-->
+<!--          </li>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
     <!--blogsbox begin-->
     <div class="blogsbox">
       <div

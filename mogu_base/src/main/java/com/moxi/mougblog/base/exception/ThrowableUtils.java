@@ -26,21 +26,24 @@ public class ThrowableUtils {
             StringBuilder sb = new StringBuilder();
             List<FieldError> errors = result.getFieldErrors();
             if (CollectionUtil.isNotEmpty(errors)) {
-                FieldError error = errors.get(0);
-                String rejectedValue = Objects.toString(error.getRejectedValue(), "");
-                String defMsg = error.getDefaultMessage();
-                // 排除类上面的注解提示
-                if (rejectedValue.contains(Constants.DELIMITER_TO)) {
-                    // 自己去确定错误字段
-                    sb.append(defMsg);
-                } else {
-                    if (Constants.DELIMITER_COLON.contains(defMsg)) {
-                        sb.append(error.getField()).append(" ").append(defMsg);
+                for(FieldError error: errors){
+//                    FieldError error = errors.get(0);
+                    String rejectedValue = Objects.toString(error.getRejectedValue(), "");
+                    String defMsg = error.getDefaultMessage();
+                    // 排除类上面的注解提示
+                    if (rejectedValue.contains(Constants.DELIMITER_TO)) {
+                        // 自己去确定错误字段
+                        sb.append(defMsg);
                     } else {
-                        sb.append(error.getField()).append(" ").append(defMsg);
-                        // sb.append(error.getField()).append(" ").append(defMsg).append(":").append(rejectedValue);
+                        if (Constants.DELIMITER_COLON.contains(defMsg)) {
+                            sb.append(error.getField()).append(" ").append(defMsg).append(" ");
+                        } else {
+                            sb.append(error.getField()).append(" ").append(defMsg).append(" ");
+                            // sb.append(error.getField()).append(" ").append(defMsg).append(":").append(rejectedValue);
+                        }
                     }
                 }
+
             } else {
                 String msg = result.getAllErrors().get(0).getDefaultMessage();
                 sb.append(msg);

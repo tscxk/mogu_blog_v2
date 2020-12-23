@@ -359,6 +359,71 @@ h1.t_nav { border-bottom: #bfbfbf 1px solid; font-size: 14px; font-weight: norma
     overflow-x: hidden;
     overflow-y: auto;
 }
+ /*新闻栏目 ----start*/
+ .img_channel_all{
+   width: 100%;
+   overflow: hidden;
+   margin: 20px auto;
+ }
+ .img_channel_all>.img_channel>.el-divider--horizontal{
+   width: 70%;
+   margin: 10px 0px 15px 0 ;
+ }
+ .img_channel_all>.img_channel{
+   width: 48%;
+   overflow: hidden;
+   position: relative;
+   float: left;
+   margin-left: 20px;
+
+
+ }
+ .img_channel_all>.img_channel>.channel_title{
+   font-weight: bold;
+   font-size: 30px;
+   color: blue;
+   margin-left: 20px;
+   margin-bottom: 10px;
+ }
+ .img_channel_all>.img_channel>.channel_first{
+   font-weight: bold;
+   font-size: 20px;
+   overflow:hidden;
+   height: 150px;
+   /*超出两行隐藏多余内容*/
+   text-overflow:ellipsis;
+   display:-webkit-box;
+   -webkit-box-orient:vertical;
+   -webkit-line-clamp:2;
+ }
+
+ .img_channel_all>.img_channel>.channel_first>.channel_first_img{
+   float: left;
+   width: 35%;
+ }
+ .img_channel_all>.img_channel>.channel_first>.channel_first_img>img{
+   max-width:100%;
+   max-height:100%;
+   width:auto;
+   height:auto;
+   margin: auto 20px auto 0px;
+ }
+ .img_channel_all>.img_channel>.channel_first>.channel_first_content{
+   margin-top: 15px;
+   margin-left: 10px;
+   float: left;
+   width: 50%;
+ }
+ .img_channel_all>.img_channel>.channel_list>li{
+   width: 80%;
+   /*最多显示单行文本*/
+   overflow:hidden;
+   text-overflow:ellipsis;
+   white-space:nowrap;
+ }
+
+ /*新闻栏目 ----end*/
+
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 header { width: 100%; margin: auto; }
 nav { width: 90% }
