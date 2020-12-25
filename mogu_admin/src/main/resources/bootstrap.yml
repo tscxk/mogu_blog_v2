@@ -1,16 +1,8 @@
 spring:
   profiles:
     active: dev
-
-  cloud:
-    nacos:
-      config:
-        username: nacos
-        password: tscxk
-      discovery:
-        username: nacos
-        password: tscxk
-
+  application:
+    name: mogu-admin
 
 server:
   ip: 39.107.247.2
