@@ -1,3 +1,4 @@
+#爷吐了  nacos开了权限有bug  改个端口也是一堆问题 太难了
 spring:
   cloud:
     nacos:
