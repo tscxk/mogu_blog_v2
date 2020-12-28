@@ -8,14 +8,3 @@ server:
   ip: 39.107.247.2
   port: 8601
 
-#dubbo 配置
-dubbo:
-  application:
-    name: mogu-admin-provider
-  registry:
-    address: nacos://39.107.247.2:8848?namespace=dev
-  protocol:
-    name: dubbo
-    port: 20883
-  scan:
-    base-packages: com.moxi.mogublog.admin.dubbo.service

@@ -1,6 +1,7 @@
 package com.moxi.mogublog.web.restapi;
 
 
+import com.moxi.mogublog.commons.api.admin.IHelloService;
 import com.moxi.mogublog.utils.ResultUtil;
 import com.moxi.mogublog.web.global.SysConf;
 import com.moxi.mogublog.web.log.BussinessLog;
@@ -10,6 +11,7 @@ import com.moxi.mougblog.base.enums.EBehavior;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +34,9 @@ public class AboutMeRestApi {
 
     @Autowired
     WebConfigService webConfigService;
+
+    @Reference(version = "1.0.0")
+    IHelloService helloService;
 
     /**
      * 获取关于我的信息

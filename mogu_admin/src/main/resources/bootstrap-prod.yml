@@ -1,16 +1,25 @@
+#爷吐了  nacos开了权限有bug  改个端口也是一堆问题 太难了
 spring:
   cloud:
     nacos:
       discovery:
         server-addr: ${server.ip}:8848
-        namespace: prod
+        namespace: ${spring.profiles.active}
       config:
         server-addr: ${server.ip}:8848
         #文件后缀
         file-extension: yaml
         #指定分组
-        group: prod
+        group: ${spring.profiles.active}
         #指定命名空间
-        namespace: prod
+        namespace: ${spring.profiles.active}
+        #测试环境通用配置文件
+        shared-configs[0]:
+          data-id: mogu-common-public.yaml
+          group: public
+        #测试环境定制配置文件
+        shared-configs[1]:
+          data-id: mogu-common-dev.yaml
+          group: ${spring.profiles.active}
 
 

@@ -1,7 +1,9 @@
 spring:
   profiles:
     active: dev
+  application:
+    name: mogu-web
 
 server:
-  port: 8603
   ip: 39.107.247.2
+  port: 8603
