@@ -19,7 +19,7 @@ spring:
         #测试环境定制配置文件
         shared-configs[1]:
           data-id: mogu-common-dev.yaml
-          group: ${spring.profiles.active}
+          group: dev
 
 
 

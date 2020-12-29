@@ -4,22 +4,22 @@ spring:
     nacos:
       discovery:
         server-addr: ${server.ip}:8848
-        namespace: ${spring.profiles.active}
+        namespace: prod
       config:
         server-addr: ${server.ip}:8848
         #文件后缀
         file-extension: yaml
         #指定分组
-        group: ${spring.profiles.active}
+        group: prod
         #指定命名空间
-        namespace: ${spring.profiles.active}
-        #测试环境通用配置文件
+        namespace: prod
+        #正式环境通用配置文件
         shared-configs[0]:
           data-id: mogu-common-public.yaml
           group: public
-        #测试环境定制配置文件
+        #正式环境定制配置文件
         shared-configs[1]:
-          data-id: mogu-common-dev.yaml
-          group: ${spring.profiles.active}
+          data-id: mogu-common-prod.yaml
+          group: prod
 
 
